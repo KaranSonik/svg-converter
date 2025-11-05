@@ -2,7 +2,7 @@ import express from 'express';
 import sharp from 'sharp';
 
 const app = express();
-app.use(express.text({ type: '*/*' }));
+app.use(express.text({ type: '*/*', limit: "50mb" }));
 
 app.post('/convert', async (req, res) => {
   try {
